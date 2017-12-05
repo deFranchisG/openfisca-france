@@ -26,9 +26,6 @@ setup(
         ('share/openfisca/openfisca-france', ['CHANGELOG.md', 'LICENSE.AGPL.txt', 'README.md']),
         ],
     extras_require = {
-        'api': [
-            'OpenFisca-Web-API >= 7.2, < 8.0',
-            ],
         'baremes_ipp': [
             'xlrd >= 1.0.0',
             'lxml >= 3.8.0, < 4.0',
@@ -51,10 +48,15 @@ setup(
         },
     include_package_data = True,  # Will read MANIFEST.in
     install_requires = [
+        'Flask >= 0.12.2',
+        'webargs >= 1.8.1',
+        'flasgger >= 0.8.0',
         'numpy >= 1.11, < 1.13',
         'OpenFisca-Core >= 20.0.0, < 21.0',
         'PyYAML >= 3.10',
+        'Flask-Cors >= 3.0.3',
         'requests >= 2.8',
+        'pandas >= 0.21.1',
         ],
     message_extractors = {'openfisca_france': [
         ('**.py', 'python', None),
