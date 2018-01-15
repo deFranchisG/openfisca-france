@@ -37,7 +37,7 @@ class Simulator():
             if 'loyer' in profile['menage']:
                 profile['menage']['loyer'] *= 12*7
             if 'cotisation_taxe_habitation' in profile['menage']:
-                profile['menage']['cotisation_taxe_habitation'] *= -6
+                profile['menage']['cotisation_taxe_habitation'] *= -7
         return profile
 
     def __compute(self, reference_simulation, reform_simulation, key, month):
